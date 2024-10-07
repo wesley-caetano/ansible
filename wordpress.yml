@@ -6,23 +6,4 @@
     - mysql-server
     - wordpress
 
-  tasks:
-    - name: Instalar e configurar o Memcached
-      apt:
-        update_cache: yes
 
-    - name: Instalar Memcached
-      apt:
-        name: memcached
-        state: present
-
-    - name: Instalar PHP Memcached extension
-      apt:
-        name: php-memcached
-        state: present
-
-    - name: Iniciar o serviço Memcached
-      service:
-        name: memcached
-        state: started
-        enabled: yes
